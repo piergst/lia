@@ -1,0 +1,65 @@
+[project]
+name = "lia"
+version = "0.1.0"
+description = "Add your description here"
+readme = "README.md"
+requires-python = ">=3.12"
+dependencies = [
+    "mypy>=1.11.2",
+    "prompt-toolkit>=3.0.48",
+    "psutil>=6.0.0",
+    "pytest-mock>=3.14.0",
+    "pytest>=8.3.3",
+    "rich>=13.8.1",
+    "sentence-transformers>=3.1.1",
+    "pyperclip>=1.9.0",
+    "freezegun>=1.5.1",
+    "coverage>=7.6.12",
+    "readchar>=4.2.1",
+]
+
+[project.scripts]
+lia = "src.main:main"
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[tool.hatch.build.targets.wheel]
+packages = ["src"]
+
+[tool.uv]
+dev-dependencies = [
+    "pytest>=8.3.3",
+]
+
+# MyPy config
+[tool.mypy]
+mypy_path = "src"
+
+[[tool.mypy.overrides]]
+module = "sentence_transformers.*"
+ignore_missing_imports = true
+
+# Pytest config
+[tool.pytest.ini_options]
+pythonpath = "src"
+
+# Coverage config
+[tool.coverage.run]
+source = ["src"]
+# source = ["src", "src/commands"]
+# branch = true
+
+[tool.coverage.report]
+omit = [
+    "*/test*",
+    "src/main.py",
+    "src/timer.py"
+]
+
+[tool.coverage.html]
+directory = "htmlcov"
+
+[tool.ruff]
+line-length = 123

@@ -1,0 +1,31 @@
+services:
+  lia:
+    build:
+      context: ../
+      dockerfile: docker/Dockerfile 
+    image: lia:0.1.0
+    container_name: lia 
+    volumes:
+      - ../src:/app/src:ro
+      - ../tests:/app/tests:ro
+      - ../pyproject.toml:/app/pyproject.toml:ro
+      - ../uv.lock:/app/uv.lock:ro
+      - ../README.md:/app/README.md
+      - ../docker/init.sh:/app/init.sh:ro
+      - ../docker/data:/root/.local/share/lia/data
+      - lia_cache:/root/.cache/lia
+      - lia_transformer_cache:/root/.cache/huggingface
+      - lia_venv:/app/.venv
+      - lia_uv_share:/root/.local/share/uv
+    tty: true
+    command: /bin/bash /app/init.sh
+
+volumes: 
+  lia_cache:
+    name: lia-cache
+  lia_venv:
+    name: lia-venv
+  lia_uv_share:
+    name: lia-uv-share
+  lia_transformer_cache:
+    name: lia-transformer-cache

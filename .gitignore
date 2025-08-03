@@ -1,0 +1,29 @@
+# Environnements virtuels
+.venv/
+env/
+
+# Cache Python
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+
+# Build et distribution
+build/
+dist/
+*.egg-info/
+
+# Fichiers de configuration d'éditeur
+.idea/
+.vscode/
+
+# Fichiers de configuration spécifiques
+*.env
+
+# Fichiers temporaires
+*.log
+
+# Fichier de coverage
+htlmcov
+.coverage
+

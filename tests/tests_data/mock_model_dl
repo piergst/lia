@@ -1,0 +1,30 @@
+modules.json:   0% 0.00/229 [00:00<?, ?B/s]
+modules.json: 100% 229/229 [00:00<00:00, 1.24MB/s]
+
+config_sentence_transformers.json:   0% 0.00/122 [00:00<?, ?B/s]
+config_sentence_transformers.json: 100% 122/122 [00:00<00:00, 484kB/s]
+
+README.md:   0% 0.00/3.90k [00:00<?, ?B/s]
+README.md: 100% 3.90k/3.90k [00:00<00:00, 18.3MB/s]
+
+sentence_bert_config.json:   0% 0.00/53.0 [00:00<?, ?B/s]
+sentence_bert_config.json: 100% 53.0/53.0 [00:00<00:00, 518kB/s]
+
+config.json:   0% 0.00/723 [00:00<?, ?B/s]
+config.json: 100% 723/723 [00:00<00:00, 503kB/s]
+
+model.safetensors:   0% 0.00/1.11G [00:00<?, ?B/s]
+model.safetensors:   1% 10.5M/1.11G [00:01<03:02, 6.03MB/s]
+model.safetensors:   2% 21.0M/1.11G [00:03<02:48, 6.47MB/s]
+model.safetensors:   3% 31.5M/1.11G [00:04<02:37, 6.85MB/s]
+model.safetensors:   4% 41.9M/1.11G [00:06<02:33, 6.96MB/s]
+
+model.safetensors:   7% 73.4M/1.11G [00:00<?, ?B/s]
+model.safetensors:   8% 83.9M/1.11G [00:01<02:50, 6.01MB/s]
+model.safetensors:   8% 94.4M/1.11G [00:03<02:26, 6.96MB/s]
+model.safetensors:   9% 105M/1.11G [00:04<02:32, 6.61MB/s] 
+model.safetensors:  10% 115M/1.11G [00:06<02:23, 6.97MB/s]
+model.safetensors:  11% 126M/1.11G [00:07<02:13, 7.37MB/s]
+model.safetensors:  12% 136M/1.11G [00:09<02:43, 5.97MB/s]
+model.safetensors:  13% 147M/1.11G [00:12<03:07, 5.16MB/s]
+model.safetensors:  14% 157M/1.11G [00:14<02:53, 5.49MB/s]
