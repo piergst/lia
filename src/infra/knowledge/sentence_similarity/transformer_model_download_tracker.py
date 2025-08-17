@@ -90,7 +90,7 @@ class TransformerModelDownloadTracker:
         Terminates when a timeout occurs (no update within 10 seconds) or when all tracked files are downloaded.
         """
         self._dl_watcher_running = True
-        timeout = timedelta(seconds=10)
+        timeout = timedelta(seconds=30)
 
         while self._dl_watcher_running:
             try:

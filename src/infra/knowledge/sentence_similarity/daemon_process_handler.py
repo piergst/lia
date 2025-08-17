@@ -64,12 +64,17 @@ class DeamonProcessHandler:
         if proc is None:
             self.clear_socket_file()
 
+            # Disable Xet: its chunked/preallocated downloads can stall and break progress tracking.
+            env = dict(os.environ)
+            env.setdefault("HF_HUB_DISABLE_XET", "1")
+
             master_fd, slave_fd = pty.openpty()
             process = subprocess.Popen(
                 [sys.executable, DAEMON_MODULE_PATH],
                 stdout=slave_fd,
                 stderr=slave_fd,
                 preexec_fn=os.setsid,  # Detach process from parent
+                env=env,
             )
             os.close(slave_fd)
             thread = threading.Thread(target=self._forward_output, args=(master_fd,), daemon=True)
